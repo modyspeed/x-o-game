@@ -79,7 +79,7 @@ function winner() {
     elements[7] != "" &&
     elements[8] != ""
   ) {
-    title.innerHTML = `game is reload`;
+    title.innerHTML = `game over and reload new game`;
     setInterval(() => {
       title.innerHTML += ".";
     }, 1000);
