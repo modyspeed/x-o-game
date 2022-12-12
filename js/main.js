@@ -3,7 +3,6 @@ let boxes = document.querySelectorAll(".box");
 let turn = "x";
 let elements = [];
 
-
 function game(id) {
   let box = document.getElementById(id);
   if (box.innerHTML == "" && turn == "x") {
@@ -70,6 +69,23 @@ function winner() {
     elements[7] != ""
   ) {
     end(3, 5, 7);
+  } else if (
+    elements[1] != "" &&
+    elements[2] != "" &&
+    elements[3] != "" &&
+    elements[4] != "" &&
+    elements[5] != "" &&
+    elements[6] != "" &&
+    elements[7] != "" &&
+    elements[8] != ""
+  ) {
+    title.innerHTML = `game is reload`;
+    setInterval(() => {
+      title.innerHTML += ".";
+    }, 1000);
+    setTimeout(() => {
+      location.reload();
+    }, 4000);
   }
 }
 function end(num1, num2, num3) {
